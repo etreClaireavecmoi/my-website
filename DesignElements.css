@@ -1,0 +1,98 @@
+/****************************************
+Intend to use a fixed background image for the main page, will wait on deployment. 
+****************************************/
+/* * is wildcard, and can be used for everything, like body. */
+
+
+:root {
+    --gold-color: rgb(203, 198, 156);
+
+}
+
+body {
+    background-color: rgba(82, 3, 58, 0.947);
+    color: var(--gold-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, serif;
+    font-variant: small-caps;
+    /*******************************************************
+    background-image: url(Images/CurtainsBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    *******************************************************/
+}
+
+/* ID selector, must be unique. */
+#title {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Class Selector. */
+.desc {
+    color: rgb(95, 216, 178);
+}
+
+.links {
+    color: rgb(0, 255, 247);
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+/* font-size: 100%
+    text-align
+    text-decoration
+    shorthand for font V
+    font: italic 200 (< weight) 2em (< size) Arial; */
+/* must have size and family */
+
+/* don't bother with shadows, but use would be
+    text-shadow: 5px (< horizontal) 5px (< vertical) 5px (< blur distance) yellow (< a colour choice for the shadow.) */
+/* Floating an image: 
+img {
+    float: left;
+    margin-right: 1em;
+} */
+/* reformatting for image float:
+ #assignment {
+ clear: left;
+ } */
+/* Relational Selector */
+main>p.desc {
+    font-weight: 500;
+    color: var(--gold-color);
+}
+
+h2.collab {
+    color: rgb(255, 245, 215);
+    font-size: 1.5em;
+    text-align: left;
+}
+
+main em {
+    color: rgb(255, 245, 215);
+    font-style: italic;
+}
+
+.links:visited {
+    color: rgb(125, 33, 238);
+    text-decoration: underline;
+}
+
+.links:hover,
+.links:visited:hover {
+    color: rgb(255, 0, 200);
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(255, 245, 215);
+}
