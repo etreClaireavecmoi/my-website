@@ -1,87 +1,116 @@
-/****************************************
-Intend to use a fixed background image for the main page, will wait on deployment. 
-****************************************/
 /* * is wildcard, and can be used for everything, like body. */
 
+/* Reset Selector */
+/* * {
+    margin: 0;
+    padding: 0;
+
+}
+*/
 
 :root {
     --gold-color: rgb(203, 198, 156);
-
+    --whitegold-color: rgb(255, 245, 215);
 }
 
-body {
-    background-color: rgba(82, 3, 58, 0.947);
-    color: var(--gold-color);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, serif;
-    font-variant: small-caps;
-    /*******************************************************
-    background-image: url(Images/CurtainsBackground.png);
+html {
+  overflow-y: scroll;
+}
+/*************************************************
+notes:
+added overflow-y: scroll to html so that the image doesn't shift on new page load.
+added body::before, it requires content: ""; for it to appear, 
+ultimate purpose was to shade the background image a bit darker.  
+Used a linear-gradient of equal value to make it as a film over the whole. 
+inset: 0, fixed, so it goes over the entire screen. 
+z-index: -1, to put it behind text but above background. 
+Added faint text-shadow to body, h1, h2, p, to make it more readable.
+*************************************************/
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(Images/CurtainsBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    *******************************************************/
 }
 
-/* ID selector, must be unique. */
+body {
+    color: var(--gold-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-variant: small-caps;
+}
+
+
+/* ID selector */
 #title {
     font-size: large;
     font-weight: bold;
     text-align: center;
 }
 
-/* Class Selector. */
+/* Class Selector */
 .desc {
     color: rgb(95, 216, 178);
 }
 
-.links {
-    color: rgb(0, 255, 247);
-    text-decoration: underline;
-}
+
 
 p {
     font-size: 1.2em;
     line-height: 1.2;
+    
 }
 
-/* font-size: 100%
-    text-align
-    text-decoration
-    shorthand for font V
-    font: italic 200 (< weight) 2em (< size) Arial; */
-/* must have size and family */
+main h2,
+main ul {
+  margin-left: 1em; 
+}
+main p {
+    margin: 2em;
+}
 
-/* don't bother with shadows, but use would be
-    text-shadow: 5px (< horizontal) 5px (< vertical) 5px (< blur distance) yellow (< a colour choice for the shadow.) */
-/* Floating an image: 
-img {
-    float: left;
-    margin-right: 1em;
-} */
-/* reformatting for image float:
- #assignment {
- clear: left;
- } */
-/* Relational Selector */
+main li {
+  margin-left: 10px; 
+}
+
 main>p.desc {
     font-weight: 500;
     color: var(--gold-color);
+    text-align: center;
 }
 
 h2.collab {
-    color: rgb(255, 245, 215);
+    color: var(--whitegold-color);
     font-size: 1.5em;
     text-align: left;
+    margin: 1em;
 }
 
+
 main em {
-    color: rgb(255, 245, 215);
+    color: var(--whitegold-color);
     font-style: italic;
 }
 
+.links {
+    color: rgb(255, 220, 255);
+    text-decoration: underline;
+    margin: 1em;
+    padding: .2em;
+    border: .5em ridge;
+    border-color: var(--gold-color);
+
+}
+
 .links:visited {
-    color: rgb(125, 33, 238);
+    color: rgb(200, 137, 231);
     text-decoration: underline;
 }
 
@@ -89,10 +118,36 @@ main em {
 .links:visited:hover {
     color: rgb(255, 0, 200);
     text-decoration: underline;
+
 }
 
+
+h1,
+h2 {
+    color: var(--whitegold-color);
+
+}
+
+body,
 h1,
 h2,
-h3 {
-    color: rgb(255, 245, 215);
+p
+.aboutme h1,
+.aboutme h2,
+.aboutme p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.aboutme h1,
+.aboutme h2,
+.aboutme p {
+    text-align: center;
+    color: var(--gold-color);
+}
+.aboutme h2,
+.aboutme p {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: dashed 1px #ffd15bfe;
+    
 }
