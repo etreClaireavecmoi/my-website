@@ -14,8 +14,9 @@
 }
 
 html {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
+
 /*************************************************
 notes:
 added overflow-y: scroll to html so that the image doesn't shift on new page load.
@@ -25,6 +26,8 @@ Used a linear-gradient of equal value to make it as a film over the whole.
 inset: 0, fixed, so it goes over the entire screen. 
 z-index: -1, to put it behind text but above background. 
 Added faint text-shadow to body, h1, h2, p, to make it more readable.
+
+changed some fixed px widths to viewport width to comply with fluid layout requirements.
 *************************************************/
 body::before {
     content: "";
@@ -55,29 +58,87 @@ body {
     text-align: center;
 }
 
+
 /* Class Selector */
 .desc {
     color: rgb(95, 216, 178);
 }
 
+/*Navigation Menu*/
+#nav_menu {
+    padding-bottom: 4em;
+    text-align: center;
+}
 
+#nav_menu ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+#nav_menu ul li {
+    display: inline-block;
+    margin: 0 .01vw;
+}
+
+main {
+    clear: left;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: inline-block;
+    width: 15vw;
+    min-width: 6em;
+    max-width: 12em;
+    padding: 1em 0;
+    /*for above and below <a> elements*/
+    text-decoration: none;
+    background-color: var(--gold-color);
+    color: rgb(108, 10, 103);
+    font-weight: bold;
+
+}
+
+#nav_menu ul li a:hover {
+    background-color: var(--whitegold-color);
+    color: black;
+    text-decoration: underline;
+}
+
+/*
+#nav_menu ul li a.lastitem {
+    border-right: none;
+}*/
+
+
+
+/*emoji*/
+.sparkles {
+    list-style-type: "✨ ";
+    padding-left: 1.5em;
+}
 
 p {
     font-size: 1.2em;
     line-height: 1.2;
-    
+
 }
 
 main h2,
 main ul {
-  margin-left: 1em; 
+    margin-left: 1em;
 }
+
 main p {
     margin: 2em;
 }
 
 main li {
-  margin-left: 10px; 
+    margin-left: 1em;
 }
 
 main>p.desc {
@@ -104,8 +165,8 @@ main em {
     text-decoration: underline;
     margin: 1em;
     padding: .2em;
-    border: .5em ridge;
-    border-color: var(--gold-color);
+    /*border: .5em ridge;
+    border-color: var(--gold-color);*/
 
 }
 
@@ -131,11 +192,10 @@ h2 {
 body,
 h1,
 h2,
-p
-.aboutme h1,
+p .aboutme h1,
 .aboutme h2,
 .aboutme p {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
 }
 
 .aboutme h1,
@@ -144,10 +204,62 @@ p
     text-align: center;
     color: var(--gold-color);
 }
+
 .aboutme h2,
 .aboutme p {
     column-count: 3;
-    column-gap: 40px;
+    column-gap: 2em;
     column-rule: dashed 1px #ffd15bfe;
-    
+
+}
+
+/* Streams page */
+/*specifically the placeholder image*/
+#streams {
+    float: left;
+    padding: 1em;
+    width: 50%;
+    min-width: 20%;
+}
+
+/*Media Queries should always be at bottom of code, otherwise will be overwritten.*/
+@media only screen and (max-width: 625px) {
+    #nav_menu ul {
+        display: block;
+        text-align: left;
+    }
+
+    /*semi-redundant display:block*/
+    #nav_menu ul li,
+    #nav_menu ul li a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        padding: .5em;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+
+    /* Adjusts aboutme.html page into 1 column on mobile. */
+    .aboutme h2,
+    .aboutme p {
+        column-count: 1;
+    }
+
+    /*nav menu in previous media query copied for stable format across pages.*/
+    #nav_menu ul {
+        display: block;
+        text-align: left;
+    }
+
+    #nav_menu ul li,
+    #nav_menu ul li a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        padding: .2em;
+    }
 }

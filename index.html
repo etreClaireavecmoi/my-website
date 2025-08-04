@@ -19,13 +19,26 @@
     <!-- Decided to unify the to-be streaming and VO brands under [REDACTED]. Make sure to get
      [REDACTED] and redirect [REDACTED] as well. Intend to remain primarily anonymous to
      non collaborators beyond character presence to protect myself during this time of strife.-->
+    <nav></nav>
     <header>
-        <h1 id="title"><strong>[REDACTED]</strong></h1>
+        <!--Navigation menu, consistent across all html pages, except maybe streams?-->
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/html/aboutme.html">About Me</a></li>
+                <li><a href="/html/services.html">Services</a></li>
+                <li><a href="/html/demoreels.html">Demo Reels</a></li>
+                <li><a href="/html/streams.html">Streams</a></li>
+                <li><a href="/html/collab.html" class="lastitem">Contact Me</a></li>
+            </ul>
+        </nav>
     </header>
-    <br>
+
+
     <main>
+        <h1 id="title"><strong>Welcome to [REDACTED]!</strong></h1>
         <p class="desc">
-            <strong> Hello! My name is Claire, welcome to my personal voiceover website! </strong>
+            <strong>My name is Claire, welcome to my personal voiceover website! </strong>
             <br><br>
             This is a work in progress, so please check back often for updates.
             <br>
@@ -44,7 +57,7 @@
         <br>
         <h2>Services</h2>
         <!--Bullet Points-->
-        <ul>
+        <ul class="sparkles">
             <li>Character Voices, Efforts</li>
             <li>Narration</li>
             <li>Audio Books</li>
@@ -64,16 +77,17 @@
         <br>
         <h2>Streams</h2>
         <!--Links to Twitch, Youtube, etc. PLACEHOLDER -->
-        <p><a href="html/twitchlink.html" class="links">Twitch</a></p>
-        <p><a href="html/twitchlink.html?test=1" class="links">Youtube</a></p>
+        <p><a href="html/twitchlink.html" target="_blank" class="links">Twitch</a></p>
+        <p><a href="https://www.youtube.com/" target="_blank" class="links">Youtube</a></p>
         <br>
         <h2>About Me</h2>
         <!-- a brief description of how I started, what things I am excited about. Known characters, when published.-->
-        <p><a href="html/aboutme.html" class="links">Coming soon!</a></p>
+        <p><a href="html/aboutme.html" target="_blank" class="links">Coming soon!</a></p>
         <br>
 
 
     </main>
+    <p><a href="#">Return to the top of the page</a></p>
     <footer>
         <p> &copy; 2025 [REDACTED]. All rights reserved.</p>
     </footer>
