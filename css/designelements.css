@@ -202,7 +202,7 @@ h2,
     text-align: center;
 }
 
-/*Grid layout for aboutme.html Works. This is laid out for 
+/*Grid layout for aboutme.html Works and demoreels.html. This is laid out for 
 future expansion. When adding images, confirm it grows/shrinks properly.*/
 .grid {
     max-width: 800px;
