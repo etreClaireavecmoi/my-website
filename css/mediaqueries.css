@@ -1,0 +1,22 @@
+/*Media Queries should always be at bottom of code, otherwise will be overwritten.*/
+/*Adjusted from the specific 625px (for nav bar) to 650px for when the Demo Reels grid moves from three to two columns.*/
+@media only screen and (max-width: 650px) {
+    #nav_menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav_menu ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav_menu ul li a {
+        width: 90%;
+        text-align: center;
+        padding: 0.5em;
+        margin: .3em;
+    }
+
+}

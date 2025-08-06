@@ -1,0 +1,245 @@
+:root {
+    --gold-color: rgb(203, 198, 156);
+    --whitegold-color: rgb(255, 245, 215);
+    --link-color: rgb(255, 220, 255);
+    --link-hover-color: rgb(255, 0, 200);
+    --linkclicked-color: rgb(200, 137, 231);
+    --box-translucent-color: rgba(64, 0, 32, 0.457);
+}
+
+/*to prevent background image shifting.
+Now also part of a body flex container, to keep 
+footer in the same spot across all pages.*/
+html {
+    overflow-y: scroll;
+    height: 100%;
+    margin: 0;
+}
+
+/*************************************************
+notes:
+added overflow-y: scroll to html so that the image doesn't shift on new page load.
+added body::before, it requires content: ""; for it to appear, 
+ultimate purpose was to shade the background image a bit darker.  
+Used a linear-gradient of equal value to make it as a film over the whole. 
+inset: 0, fixed, so it goes over the entire screen. 
+z-index: -1, to put it behind text but above background. 
+Added faint text-shadow to body, h1, h2, p, to make it more readable.
+*************************************************/
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../images/curtainsbackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Body styles. Now part of flex container, note above html. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--gold-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-variant: small-caps;
+}
+
+/*For consistent heading layout across pages.*/
+.heading {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: var(--whitegold-color);
+}
+
+/*Navigation Menu across all pages. */
+#nav_menu {
+    padding-bottom: 4em;
+    text-align: center;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+
+#nav_menu ul li {
+    flex: 1;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: inline-block;
+    border-radius: .5em;
+    width: 15vw;
+    min-width: 6em;
+    max-width: 12em;
+    padding: 1em 0;
+    /* for above and below <a> elements */
+    text-decoration: none;
+    background-color: var(--gold-color);
+    /*This colour does not show anywhere else, at least for now.*/
+    color: rgb(108, 10, 103);
+    font-weight: bold;
+    /*For some glow effect! not confirmed on choice, gather opinions on it.*/
+    box-shadow: 0 0 .5em var(--gold-color);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#nav_menu ul li a:hover {
+    background-color: var(--whitegold-color);
+    color: black;
+    text-decoration: underline;
+}
+
+/*emoji*/
+.sparkles {
+    list-style-type: "✨ ";
+    margin: 1.5em 0;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/*Part of flex container note above html.*/
+main {
+    flex: 1;
+}
+
+main h2,
+main ul {
+    margin-left: 1em;
+}
+
+main p {
+    margin: 2em;
+}
+
+main li {
+    margin-left: 1em;
+}
+
+main>p.desc {
+    font-weight: 500;
+    color: var(--gold-color);
+    text-align: center;
+}
+
+main em {
+    color: var(--whitegold-color);
+    font-style: italic;
+}
+/*to lock in place across pages, see html note.*/
+footer {
+    text-align: left;
+    font-size: 0.8em;
+    padding: .5em 1em;
+    color: var(--gold-color);
+    position: static;
+}
+
+/*Links */
+.link-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin: 2em auto;
+}
+
+.links {
+    color: var(--link-color);
+    text-decoration: underline;
+    font-size: 1.2em;
+    padding: .5em 1em;
+    border: 1px solid var(--gold-color);
+    border-radius: .5em;
+    background: var(--box-translucent-color);
+    box-shadow: inset 0 0 0.4em var(--whitegold-color);
+    transition: all 0.3s ease;
+}
+
+.links:visited {
+    color: var(--linkclicked-color);
+    text-decoration: underline;
+}
+
+.links:hover,
+.links:visited:hover {
+    color: var(--link-hover-color);
+    background: var(--whitegold-color);
+    box-shadow: 0 0 .5em var(--gold-color);
+    text-decoration: underline;
+}
+
+h1,
+h2 {
+    color: var(--whitegold-color);
+}
+
+body,
+h1,
+h2,
+.aboutme h1,
+.aboutme h2,
+.aboutme p {
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+}
+
+.aboutme h1 {
+    color: var(--whitegold-color);
+    text-align: center;
+}
+
+/*Grid layout for aboutme.html Works. This is laid out for 
+future expansion. When adding images, confirm it grows/shrinks properly.*/
+.grid {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.grid h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: var(--whitegold-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5em;
+}
+
+.grid-item {
+    padding: 1em;
+    background: var(--box-translucent-color);
+    border: 1px solid var(--gold-color);
+    border-radius: 0.5em;
+    color: var(--whitegold-color);
+    transition: transform 0.3s ease;
+}
+
+.grid-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: .5em;
+    margin-bottom: 1.5em;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
