@@ -16,16 +16,6 @@ html {
     margin: 0;
 }
 
-/*************************************************
-notes:
-added overflow-y: scroll to html so that the image doesn't shift on new page load.
-added body::before, it requires content: ""; for it to appear, 
-ultimate purpose was to shade the background image a bit darker.  
-Used a linear-gradient of equal value to make it as a film over the whole. 
-inset: 0, fixed, so it goes over the entire screen. 
-z-index: -1, to put it behind text but above background. 
-Added faint text-shadow to body, h1, h2, p, to make it more readable.
-*************************************************/
 body::before {
     content: "";
     position: fixed;
@@ -87,7 +77,6 @@ body {
     /* for above and below <a> elements */
     text-decoration: none;
     background-color: var(--gold-color);
-    /*This colour does not show anywhere else, at least for now.*/
     color: rgb(108, 10, 103);
     font-weight: bold;
     /*For some glow effect! not confirmed on choice, gather opinions on it.*/
@@ -101,15 +90,28 @@ body {
     text-decoration: underline;
 }
 
-/*emoji*/
+/*emoji, lists.*/
 .sparkles {
     list-style-type: "✨ ";
     margin: 1.5em 0;
 }
 
+/*to prevent clipping with collab.html email links */
+ul.contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1em 0;
+}
+
+ul.contact-list li {
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+}
+
+
 p {
     font-size: 1.2em;
-    line-height: 1;
+    line-height: 1.4;
 }
 
 /*Part of flex container note above html.*/
@@ -140,6 +142,7 @@ main em {
     color: var(--whitegold-color);
     font-style: italic;
 }
+
 /*to lock in place across pages, see html note.*/
 footer {
     text-align: left;
@@ -176,16 +179,23 @@ footer {
 }
 
 .links:hover,
-.links:visited:hover {
+.links:visited:hover,
+.links:focus {
     color: var(--link-hover-color);
     background: var(--whitegold-color);
     box-shadow: 0 0 .5em var(--gold-color);
     text-decoration: underline;
+    outline: 2px solid var(--whitegold-color);
+    outline-offset: 2px;
 }
 
 h1,
 h2 {
     color: var(--whitegold-color);
+}
+
+h3 {
+    text-align: center;
 }
 
 body,
@@ -197,8 +207,7 @@ h2,
     text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
 }
 
-.aboutme h1 {
-    color: var(--whitegold-color);
+.aboutme h2 {
     text-align: center;
 }
 
@@ -219,12 +228,18 @@ future expansion. When adding images, confirm it grows/shrinks properly.*/
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 20vw, 180px), 1fr));
     gap: 1.5em;
 }
 
 .grid-item {
-    padding: 1em;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: .8em 1em;
     background: var(--box-translucent-color);
     border: 1px solid var(--gold-color);
     border-radius: 0.5em;
@@ -242,4 +257,20 @@ future expansion. When adding images, confirm it grows/shrinks properly.*/
 
 .grid-item:hover {
     transform: scale(1.05);
+}
+
+.grid-item audio {
+    margin: 0;
+    margin-top: .3em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.grid-item p {
+    margin-bottom: .3em;
+    line-height: 1.4;
+    max-width: 90%;
+    text-align: center;
+    color: var(--whitegold-color);
 }

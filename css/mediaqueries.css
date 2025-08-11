@@ -1,5 +1,17 @@
 /*Media Queries should always be at bottom of code, otherwise will be overwritten.*/
-/*Adjusted from the specific 625px (for nav bar) to 650px for when the Demo Reels grid moves from three to two columns.*/
+/*Adjusted from the specific 625px (for nav bar) to 650px. 
+Columns in demoreels.html drop from four to two, then one.*/
+
+@media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-item {
+        min-height: 240px;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     #nav_menu ul {
         flex-direction: column;
@@ -18,5 +30,25 @@
         padding: 0.5em;
         margin: .3em;
     }
+}
 
+@media (max-width: 620px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*To resolve email links clipping with prior text.*/
+@media (max-width: 530px) {
+    .links {
+        word-break: break-word;
+        white-space: normal;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+
+    ul.contact-list li {
+        text-align: center;
+        margin-bottom: 5em;
+    }
 }
