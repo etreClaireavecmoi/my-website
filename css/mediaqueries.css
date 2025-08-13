@@ -52,3 +52,10 @@ Columns in demoreels.html drop from four to two, then one.*/
         margin-bottom: 5em;
     }
 }
+
+/*Logo on home page*/
+@media (max-width: 768px) {
+    .logo {
+        max-width: 200px;
+    }
+}

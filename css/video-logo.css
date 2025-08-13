@@ -1,0 +1,36 @@
+/*Currently, this CSS only affects the embedded video and the logo on the home page. 
+If/when this situation changes, apply/adjust as needed. Added media query for logo in mediaqueries.css.*/
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 90%;
+    padding: 1rem;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16/9;
+    height: auto;
+    border: 4px solid var(--gold-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .25);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.video-container iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: clamp(150px, 20vw, 300px);
+    max-width: 300px;
+    height: auto;
+}
