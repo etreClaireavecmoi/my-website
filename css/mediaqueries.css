@@ -1,6 +1,36 @@
 /*Media Queries should always be at bottom of code, otherwise will be overwritten.*/
 /*Adjusted from the specific 625px (for nav bar) to 650px. 
-Columns in demoreels.html drop from four to two, then one.*/
+Columns in demoreels.html drop from four to two, then one.
+Will place fonts on this page as well, since each page will also include this stylesheet, and designelements.css is getting crowded.
+Additional fonts: 
+"Beau Rivage"
+Added .icon-list, .icon-list li, and .fawesome for icons in services.html. Remember to remove later.  
+******************/
+
+.beau {
+    font-family: "Beau Rivage", cursive;
+    font-weight: 400;
+    font-size: 2.2em;
+    font-style: normal;
+    margin-top: 0;
+}
+
+.icon-list {
+    list-style: none;
+    margin: 1.5em 0;
+    padding-left: 0;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fawesome {
+    color: #cbc69c;
+    font-size: 24px;
+}
 
 @media (max-width: 700px) {
     .grid-container {

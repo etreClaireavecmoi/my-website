@@ -42,8 +42,10 @@ body {
 
 /*For consistent heading layout across pages.*/
 .heading {
-    font-size: 2em;
-    margin-bottom: 1em;
+    font-variant: none;
+    font-family: "Beau Rivage", cursive;
+    font-size: 3em;
+    font-weight: 400;
     text-align: center;
     color: var(--whitegold-color);
 }
@@ -192,10 +194,12 @@ footer {
 h1,
 h2 {
     color: var(--whitegold-color);
+    text-align: center;
 }
 
 h3 {
     text-align: center;
+    font-variant: none;
 }
 
 body,

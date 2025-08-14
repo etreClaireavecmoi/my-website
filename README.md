@@ -24,6 +24,10 @@ Once domain names have been purchased and redirected, the official business name
 
 -logo (replace with official when commissioned.)
 
+-FontAwesome icon on services.html (was using .sparkles)
+
+
+
 
 
 Notes from class to be incorporated:
@@ -39,4 +43,6 @@ Action Taken: added an embedded video of an esteemed voice actor's reel.
 
 
 Suggestion: Add logo image to front page, possibly incorporated with the "name" \[REDACTED].
+
+Action Taken: Had a temp logo created and placed on the home page. 
 

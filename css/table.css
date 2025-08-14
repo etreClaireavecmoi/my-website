@@ -1,0 +1,39 @@
+/*Running out of css space, so this page is specifically for the table on services.html.*/
+
+.services-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    font-family: Cambria, Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--box-translucent-color);
+    /*for legebility*/
+    backdrop-filter: blur(4px);
+    color: #fff5d7;
+}
+
+.services-table th,
+.services-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.services-table thead {
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #fff5d7;
+}
+
+/*consistent hover effect as with the links*/
+.services-table tbody tr {
+    transition: background 0.3s;
+}
+
+.services-table tbody tr:hover {
+    background-color: rgba(255, 245, 215, 0.25);
+}
+
+.services-table td:first-child {
+    font-weight: bold;
+}
