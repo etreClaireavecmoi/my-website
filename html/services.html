@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Includes font Beau Rivage (mediaqueries.css, .heading in designelements.css) 
+from Google Fonts (incase it breaks later.)
+Only page with a table, so only page with table.css.-->
 
 <head>
     <meta charset="UTF-8">
@@ -43,41 +46,44 @@
                         required, please have Japanese in
                         hiragana/katakana and/or romanji.</small></em></li>
         </ul>
-        <h2><small>Don't see what you want listed? Ask! I am highly flexible and open to all kinds of projects.</small>
-        </h2>
+        <p class="notice">Don't see what you want listed? Ask! I am highly flexible and open to all kinds of projects.
+        </p>
         <br>
-        <!--Equipment Listing. Turn into table?-->
+        <!--Equipment Listing. Update as it changes.-->
         <h2 class="heading">Current Equipment</h2>
         <table class="services-table">
+            <caption class="sr-only">Current equipment used for voice recording and production</caption>
             <thead>
                 <tr>
-                    <th>Equipment</th>
-                    <th>Details</th>
+                    <!--for screen reader clarity.-->
+                    <th scope="col">Equipment</th>
+                    <th scope="col">Details</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>✨ Microphone</td>
+                    <!--added span to hide emoji from being read aloud on screen reader.-->
+                    <td><span aria-hidden="true">✨</span> Microphone</td>
                     <td>Sennheiser MKH-416 P48</td>
                 </tr>
                 <tr>
-                    <td>✨ Cable</td>
+                    <td><span aria-hidden="true">✨</span> Cable</td>
                     <td>Mogami Gold Studio XLR</td>
                 </tr>
                 <tr>
-                    <td>✨ Audio Interface</td>
+                    <td><span aria-hidden="true">✨</span> Audio Interface</td>
                     <td>Creative Soundblaster AE-9</td>
                 </tr>
                 <tr>
-                    <td>✨ Room</td>
+                    <td><span aria-hidden="true">✨</span> Room</td>
                     <td>Foam-treated</td>
                 </tr>
                 <tr>
-                    <td>✨ Boom Arms</td>
+                    <td><span aria-hidden="true">✨</span> Boom Arms</td>
                     <td>Separate for mic and camera</td>
                 </tr>
                 <tr>
-                    <td>✨ Internet Connection</td>
+                    <td><span aria-hidden="true">✨</span> Internet Connection</td>
                     <td>Wi-Fi 7, 360mbps down, 40mbps up</td>
                 </tr>
             </tbody>

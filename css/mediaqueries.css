@@ -1,12 +1,14 @@
-/*Media Queries should always be at bottom of code, otherwise will be overwritten.*/
+/*Media Queries should always be at bottom of code/html order, otherwise will be overwritten.*/
 /*Adjusted from the specific 625px (for nav bar) to 650px. 
 Columns in demoreels.html drop from four to two, then one.
-Will place fonts on this page as well, since each page will also include this stylesheet, and designelements.css is getting crowded.
+Will place specific accessibility and fonts on this page as well, since each page will also include this stylesheet, and designelements.css is getting crowded.
 Additional fonts: 
 "Beau Rivage"
-Added .icon-list, .icon-list li, and .fawesome for icons in services.html. Remember to remove later.  
+Added .icon-list, .icon-list li, and .fawesome for icons in services.html. Remember to remove later after grading.  
 ******************/
 
+/*Currently only affects h3 element "Come hang out!" on index.html. This is to seperate it from .header. 
+If Google fonts breaks, it and all .header elements fall back to Cambria, Cochin, Georgia, Times, 'Times New Roman', serif.*/
 .beau {
     font-family: "Beau Rivage", cursive;
     font-weight: 400;
@@ -30,6 +32,18 @@ Added .icon-list, .icon-list li, and .fawesome for icons in services.html. Remem
 .fawesome {
     color: #cbc69c;
     font-size: 24px;
+}
+/*announces caption to screen reader, but keeps it visually off the page.*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 @media (max-width: 700px) {

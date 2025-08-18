@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Includes font Beau Rivage (mediaqueries.css, .heading in designelements.css) 
+from Google Fonts (incase it breaks later.)-->
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +17,7 @@
 
 <body>
     <header>
+        <!--Nav bar-->
         <nav id="nav_menu">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -30,14 +33,15 @@
 
 
     <main>
-        <!--This page is for embedding demo reels. Placeholder sounds are .wav, actuals should be .mp3 or .ogg.
+        <!--This page is for embedding demo reels. Placeholder sounds are .wav, actuals should be .mp3 or .ogg for loading speed.
         This section lays out where each item will be embedded.-->
+        <!--Added a bunch of screen reader accessibility functions.-->
         <h2 class="heading">Demo Reels</h2>
         <div class="grid">
             <div class="grid-container">
                 <div class="grid-item">
                     <p>English Character Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="First English Character Reel audio">
                         <source src="../audio/percussion-crash-1.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -45,7 +49,7 @@
 
                 <div class="grid-item">
                     <p>English Character Reel 2</p>
-                    <audio controls>
+                    <audio controls aria-label="Second English Character Reel audio">
                         <source src="../audio/percussion-crash-2.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -53,7 +57,7 @@
 
                 <div class="grid-item">
                     <p>French Character Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="French Character Reel audio">
                         <source src="../audio/percussion-crash-3.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -61,7 +65,7 @@
 
                 <div class="grid-item">
                     <p>Japanese Character Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="Japanese Character Reel audio">
                         <source src="../audio/percussion-crash-4.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -69,7 +73,7 @@
 
                 <div class="grid-item">
                     <p>English Singing Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="First English Singing Reel audio">
                         <source src="../audio/1-csharp-ooh-vocal-swell.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -77,7 +81,7 @@
 
                 <div class="grid-item">
                     <p>English Singing Reel 2</p>
-                    <audio controls>
+                    <audio controls aria-label="Second English Singing Reel audio">
                         <source src="../audio/1-e-ooh-vocal-swell.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -85,7 +89,7 @@
 
                 <div class="grid-item">
                     <p>French Singing Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="French Singing Reel audio">
                         <source src="../audio/1-asharp-ooh-vocal-swell.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -93,7 +97,7 @@
 
                 <div class="grid-item">
                     <p>Japanese Singing Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="Japanese Singing Reel audio">
                         <source src="../audio/1-gsharp-ooh-vocal-swell.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -101,7 +105,7 @@
 
                 <div class="grid-item">
                     <p>Narration Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="Narration Reel audio">
                         <source src="../audio/ambientdarkspace.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -109,7 +113,7 @@
 
                 <div class="grid-item">
                     <p>Audiobook Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="Audiobook Reel audio">
                         <source src="../audio/ambientdreamy.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
@@ -117,15 +121,15 @@
 
                 <div class="grid-item">
                     <p>Commercial Reel</p>
-                    <audio controls>
+                    <audio controls aria-label="First Commercial Reel audio">
                         <source src="../audio/corporatestocks.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
 
                 <div class="grid-item">
-                    <p>Placeholder</p>
-                    <audio controls>
+                    <p>Commercial Reel</p>
+                    <audio controls aria-label="Second Commercial Reel audio">
                         <source src="../audio/corporatecoffee.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>

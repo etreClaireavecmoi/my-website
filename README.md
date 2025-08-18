@@ -20,7 +20,7 @@ Once domain names have been purchased and redirected, the official business name
 
 \***CLAIRE** - **remember to clean up after class ends! What needs to be removed will be listed as added. CSS design elements can remain for future use.\***
 
--embedded video
+-embedded video. Keep spot for your future video. 
 
 -logo (replace with official when commissioned.)
 

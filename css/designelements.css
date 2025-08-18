@@ -7,8 +7,7 @@
     --box-translucent-color: #40002075;
 }
 
-/*to prevent background image shifting.
-Now also part of a body flex container, to keep 
+/*to prevent background image shifting. Also part of a body flex container, to keep 
 footer in the same spot across all pages.*/
 html {
     overflow-y: scroll;
@@ -16,6 +15,7 @@ html {
     margin: 0;
 }
 
+/*Background Image*/
 body::before {
     content: "";
     position: fixed;
@@ -86,10 +86,13 @@ body {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-#nav_menu ul li a:hover {
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus {
     background-color: var(--whitegold-color);
     color: black;
     text-decoration: underline;
+    outline: 2px solid var(--whitegold-color);
+    outline-offset: 2px;
 }
 
 /*emoji, lists.*/
@@ -114,6 +117,13 @@ ul.contact-list li {
 p {
     font-size: 1.2em;
     line-height: 1.4;
+}
+
+/*for P in services.html, better semantics. Replaced <large> for consistency across browers.*/
+.notice {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--whitegold-color)
 }
 
 /*Part of flex container note above html.*/
@@ -259,8 +269,11 @@ future expansion. When adding images, confirm it grows/shrinks properly.*/
     margin-bottom: 1.5em;
 }
 
-.grid-item:hover {
+.grid-item:hover,
+.grid-item:focus {
     transform: scale(1.05);
+    outline: 2px solid var(--whitegold-color);
+    outline-offset: 2px;
 }
 
 .grid-item audio {
