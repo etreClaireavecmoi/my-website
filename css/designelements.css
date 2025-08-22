@@ -48,17 +48,6 @@ body {
     font-variant: small-caps;
 }
 
-/*For consistent heading layout across pages.*/
-.heading {
-    margin: 0 0 1em 0;
-    font-variant: none;
-    font-family: "Beau Rivage", cursive;
-    font-size: 5em;
-    font-weight: 400;
-    text-align: center;
-    color: var(--whitegold-color);
-}
-
 /*Navigation Menu across all pages. */
 #nav_menu {
     padding-bottom: 0em;
@@ -122,10 +111,6 @@ ul.contact-list li {
     text-align: center;
 }
 
-p {
-    font-size: 1.5em;
-    line-height: 1.4;
-}
 
 /*for P in services.html, better semantics. Replaced <large> for consistency across browers.*/
 .notice {
@@ -139,16 +124,15 @@ main {
     flex: 1;
 }
 
-
-
 main li {
     font-size: 1.2em;
-    margin-left: 0 0 1em 1em;
+    margin: 0 0 1em 1em;
 }
 
 main p,
 main>p.desc {
-    margin: 1em 2em;
+    font-size: 1.5em;
+    margin: 2.5em 2em;
     font-weight: 500;
     color: var(--gold-color);
     text-align: center;
@@ -229,6 +213,17 @@ h2,
 .aboutme h2,
 .aboutme p {
     text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+}
+
+/*For consistent heading layout across pages.*/
+.heading {
+    margin: 0 0 1em 0;
+    font-variant: none;
+    font-family: "Beau Rivage", cursive;
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center;
+    color: var(--whitegold-color);
 }
 
 /*Grid layout for aboutme.html Works and demoreels.html. This is laid out for 

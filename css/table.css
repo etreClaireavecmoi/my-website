@@ -4,7 +4,8 @@ Added list on services.html to this page as well.*/
 .services-list {
     list-style-type: "✨ ";
     margin: .5em auto;
-    padding-left: 0;
+    padding-left: 1em;
+    width: 90%;
     max-width: 600px;
 }
 
