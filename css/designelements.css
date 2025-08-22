@@ -1,9 +1,15 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
-    --gold-color: #cbc69c;
+    --gold-color: #d8d3a1;
     --whitegold-color: #fff5d7;
     --link-color: #ffdcff;
     --link-hover-color: #ff00c8;
-    --linkclicked-color: #c889e7;
+    --linkclicked-color: #8c1a2f;
     --box-translucent-color: #40002075;
 }
 
@@ -11,7 +17,9 @@
 footer in the same spot across all pages.*/
 html {
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
+    font-size: 18px;
     margin: 0;
 }
 
@@ -42,9 +50,10 @@ body {
 
 /*For consistent heading layout across pages.*/
 .heading {
+    margin: 0 0 1em 0;
     font-variant: none;
     font-family: "Beau Rivage", cursive;
-    font-size: 3em;
+    font-size: 5em;
     font-weight: 400;
     text-align: center;
     color: var(--whitegold-color);
@@ -52,7 +61,7 @@ body {
 
 /*Navigation Menu across all pages. */
 #nav_menu {
-    padding-bottom: 4em;
+    padding-bottom: 0em;
     text-align: center;
 }
 
@@ -79,9 +88,10 @@ body {
     /* for above and below <a> elements */
     text-decoration: none;
     background-color: var(--gold-color);
-    color: rgb(108, 10, 103);
+    color: rgb(137, 5, 97);
+    font-size: 1.1em;
     font-weight: bold;
-    /*For some glow effect! not confirmed on choice, gather opinions on it.*/
+    /*For some glow effect!*/
     box-shadow: 0 0 .5em var(--gold-color);
     transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -95,14 +105,9 @@ body {
     outline-offset: 2px;
 }
 
-/*emoji, lists.*/
-.sparkles {
-    list-style-type: "✨ ";
-    margin: 1.5em 0;
-}
-
 /*to prevent clipping with collab.html email links */
 ul.contact-list {
+    text-align: center;
     list-style: none;
     padding-left: 0;
     margin: 1em 0;
@@ -113,15 +118,18 @@ ul.contact-list li {
     padding-bottom: .5em;
 }
 
+.collab {
+    text-align: center;
+}
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 1.4;
 }
 
 /*for P in services.html, better semantics. Replaced <large> for consistency across browers.*/
 .notice {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 500;
     color: var(--whitegold-color)
 }
@@ -131,20 +139,16 @@ main {
     flex: 1;
 }
 
-main h2,
-main ul {
-    margin-left: 1em;
-}
 
-main p {
-    margin: 2em;
-}
 
 main li {
-    margin-left: 1em;
+    font-size: 1.2em;
+    margin-left: 0 0 1em 1em;
 }
 
+main p,
 main>p.desc {
+    margin: 1em 2em;
     font-weight: 500;
     color: var(--gold-color);
     text-align: center;
@@ -176,7 +180,7 @@ footer {
 .links {
     color: var(--link-color);
     text-decoration: underline;
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding: .5em 1em;
     border: 1px solid var(--gold-color);
     border-radius: .5em;
@@ -202,13 +206,19 @@ footer {
 }
 
 h1,
+h2,
+h3 {
+    text-align: center;
+    margin-bottom: 1em;
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+}
+
+h1,
 h2 {
     color: var(--whitegold-color);
-    text-align: center;
 }
 
 h3 {
-    text-align: center;
     font-variant: none;
 }
 
@@ -219,10 +229,6 @@ h2,
 .aboutme h2,
 .aboutme p {
     text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
-}
-
-.aboutme h2 {
-    text-align: center;
 }
 
 /*Grid layout for aboutme.html Works and demoreels.html. This is laid out for 
@@ -242,11 +248,14 @@ future expansion. When adding images, confirm it grows/shrinks properly.*/
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 20vw, 180px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 20vw, 180px), 1fr));
     gap: 1.5em;
+    width: 100%;
+    padding: 0;
 }
 
 .grid-item {
+    min-width: 0;
     min-height: 220px;
     display: flex;
     flex-direction: column;
@@ -280,8 +289,7 @@ future expansion. When adding images, confirm it grows/shrinks properly.*/
     margin: 0;
     margin-top: .3em;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    min-width: 180px;
 }
 
 .grid-item p {

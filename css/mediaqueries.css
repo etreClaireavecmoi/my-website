@@ -3,8 +3,7 @@
 Columns in demoreels.html drop from four to two, then one.
 Will place specific accessibility and fonts on this page as well, since each page will also include this stylesheet, and designelements.css is getting crowded.
 Additional fonts: 
-"Beau Rivage"
-Added .icon-list, .icon-list li, and .fawesome for icons in services.html. Remember to remove later after grading.  
+"Beau Rivage"  
 ******************/
 
 /*Currently only affects h3 element "Come hang out!" on index.html. This is to seperate it from .header. 
@@ -12,27 +11,11 @@ If Google fonts breaks, it and all .header elements fall back to Cambria, Cochin
 .beau {
     font-family: "Beau Rivage", cursive;
     font-weight: 400;
-    font-size: 2.2em;
+    font-size: 4em;
     font-style: normal;
     margin-top: 0;
 }
 
-.icon-list {
-    list-style: none;
-    margin: 1.5em 0;
-    padding-left: 0;
-}
-
-.icon-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.fawesome {
-    color: #cbc69c;
-    font-size: 24px;
-}
 /*announces caption to screen reader, but keeps it visually off the page.*/
 .sr-only {
     position: absolute;
@@ -46,15 +29,29 @@ If Google fonts breaks, it and all .header elements fall back to Cambria, Cochin
     border: 0;
 }
 
-@media (max-width: 700px) {
+.about-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.about-grid-item img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: .5em;
+}
+
+
+@media (max-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .grid-item {
-        min-height: 240px;
-    }
 }
+
 
 @media only screen and (max-width: 650px) {
     #nav_menu ul {
@@ -74,11 +71,21 @@ If Google fonts breaks, it and all .header elements fall back to Cambria, Cochin
         padding: 0.5em;
         margin: .3em;
     }
+
+    .heading {
+        font-size: 3em;
+    }
 }
 
 @media (max-width: 620px) {
     .grid-container {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .about-grid-item {
+        max-width: 350px;
+        width: 100%;
     }
 }
 

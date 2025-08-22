@@ -1,11 +1,25 @@
-/*Running out of css space, so this page is specifically for the table on services.html.*/
+/*Running out of css space, so this page is specifically for the table on services.html.
+Added list on services.html to this page as well.*/
 
+.services-list {
+    list-style-type: "✨ ";
+    margin: .5em auto;
+    padding-left: 0;
+    max-width: 600px;
+}
+
+.services-list li {
+    margin: .25em 0;
+    padding: .25em 0;
+    text-align: left;
+}
 
 .services-table {
     width: 100%;
     max-width: 700px;
     margin: 2rem auto;
     border-collapse: collapse;
+    border-radius: .5em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: var(--box-translucent-color);
